@@ -1,0 +1,51 @@
+footer {
+  @include flex(row, flex-end, center, center);
+  background-color: #467589;
+  width: 100%;
+  z-index: 1;
+  height: auto;
+  padding: 1rem;
+  font-size: 1.25rem;
+  .desktop {
+    @include flex(row, space-around, center, center);
+    padding: 0 1rem;
+    gap: 1rem;
+    width: 100%;
+    svg.logoFooter {
+      width: 20rem;
+      height: 6rem;
+      color: #fff;
+    }
+    .svg-icons {
+      @include flex(row, center, center, center);
+      gap: 2rem;
+      svg {
+        fill: #fff;
+      }
+      a {
+        padding: 0;
+        width: 2rem;
+      }
+    }
+    a {
+      color: #fff;
+      padding: 0.5rem;
+    }
+    .licence {
+      @include flex(column, center, start, center);
+    }
+    .cookies {
+      @include flex(column, center, start, center);
+      .itemFooter {
+        @include flex(row, center, center, center);
+        gap: 1rem;
+      }
+    }
+  }
+}
+/* ====================== Tablette ===================== */
+@media screen and (max-width: 1000px) {
+  footer {
+    display: none;
+  }
+}

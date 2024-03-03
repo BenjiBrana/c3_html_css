@@ -1,0 +1,108 @@
+header {
+  border-bottom: $borderLight;
+  @include flex(row, space-between, center, center);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0 2rem;
+  background: #fff;
+  color: $colorDarkBlue;
+  flex-wrap: wrap;
+  gap: 5rem;
+  .logo {
+    @include flex(column, space-between, flex-start, center);
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn-burger {
+    display: none;
+  }
+  nav.navbarDesktop {
+    ul {
+      @include flex(row, space-between, center, center);
+      gap: 1rem;
+      flex: 1;
+      li {
+        @include flex(row, center, center, center);
+        flex-wrap: wrap;
+        font-size: 1.6rem;
+        font-weight: bold;
+        &:hover {
+          border-bottom: 0.2rem solid $colorDarkBlue;
+          transition: 0.1s ease-in;
+        }
+        a {
+          @include flex(column, center, center, center);
+          flex-wrap: wrap;
+          width: 100%;
+          padding: 1rem;
+          color: $colorDarkBlue;
+          img {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  header {
+    a {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    gap: 0;
+    padding-bottom: 0.5rem;
+    .logo {
+      @include flex(row, center, center, center);
+    }
+    a {
+      font-size: 1.3rem;
+    }
+  }
+}
+@media screen and (max-width: 740px) {
+  header {
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 2rem;
+    .logo {
+      flex: 1;
+      img {
+        width: 100%;
+      }
+    }
+    nav.navbarDesktop {
+      flex: 1;
+      ul {
+        width: 100%;
+        gap: 0.5rem;
+        li {
+          a {
+            padding: 0.5rem;
+            .itemMenu {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  header {
+    .logo {
+      flex: 2;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+.sideBar {
+  @include flex(column, start, center, center);
+  @include ombreLight();
+  width: 15%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  border-right: $borderLight;
+  background: #fff;
+  h1 {
+    padding: 3rem 0;
+    background: $blancPersonnalise;
+    width: 100%;
+    text-align: center;
+  }
+  .groupCategory {
+    width: 100%;
+    .category {
+      @include flex(column, center, center, center);
+      width: 100%;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      background: $blancPersonnalise;
+      a {
+        @include flex(column, flex-start, center, center);
+        gap: 0.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      img.circle {
+        border-radius: 10rem;
+      }
+      input {
+        width: 70%;
+      }
+      .group {
+        @include flex(row, center, center, center);
+        width: 50%;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        input {
+          flex: 1;
+        }
+        label {
+          flex: 2;
+        }
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      font-weight: 500;
+      .categorieName {
+        @include ombreLight();
+        width: 100%;
+        padding: 4rem 3rem;
+        align-items: center;
+        border-top: 0.1rem solid #0000002c;
+      }
+    }
+  }
+}
+
+/* ====================== Desktop ===================== */
+@media screen and (max-width: 1280px) {
+  .sideBar {
+    h1 {
+      font-size: 2rem;
+    }
+    .groupCategory {
+      .category {
+        h2 {
+          font-size: 1.25rem;
+          text-align: center;
+        }
+        li {
+          padding-top: 1rem;
+        }
+        .group {
+          flex-direction: column-reverse;
+          font-size: 1.2rem;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}
+/* ====================== Tablette ===================== */
+@media screen and (max-width: 800px) {
+  .sideBar {
+    width: 20%;
+    h1 {
+      font-size: 1.6rem;
+    }
+    .groupCategory {
+      .category {
+        input {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+/* ====================== Mobile ===================== */
+@media screen and (max-width: 600px) {
+  .sideBar {
+    width: 100%;
+    position: relative;
+    h1 {
+      padding: 0.5rem 0;
+      font-size: 2rem;
+    }
+    .groupCategory {
+      @include flex(row, center, stretch, center);
+      .category {
+        justify-content: flex-start;
+        input {
+          width: 80%;
+        }
+
+        h2 {
+          height: 20%;
+        }
+        ul {
+          display: flex;
+          flex-direction: row;
+          gap: 2rem;
+          li {
+            a {
+              .crud {
+                display: none;
+              }
+            }
+          }
+        }
+        .group {
+          width: 100%;
+          flex-direction: row;
+
+          input {
+            flex: 0;
+            width: 10%;
+          }
+          label {
+            flex: 0;
+          }
+        }
+      }
+    }
+  }
+}
