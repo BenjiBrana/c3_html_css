@@ -15,6 +15,7 @@
   }
   .groupCategory {
     width: 100%;
+
     .category {
       @include flex(column, center, center, center);
       width: 100%;
@@ -23,6 +24,15 @@
       padding: 0.5rem;
       font-size: 1.2rem;
       background: $blancPersonnalise;
+      ul {
+        li {
+          margin: 0.5rem 0;
+          padding: 0.5rem;
+          &:hover {
+            @include ombreLight();
+          }
+        }
+      }
       a {
         @include flex(column, flex-start, center, center);
         gap: 0.5rem;
