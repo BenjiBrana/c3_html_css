@@ -26,8 +26,8 @@ $borderLight: 0.01rem solid rgba(0, 0, 0, 0.1);
 //Font
 @font-face {
   font-family: 'Poppins';
-  src: url('../fonts/Poppins-Bold.ttf') format('truetype');
-  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+  src: url('../fonts/Poppins-Bold.woff2') format('truetype');
+  src: url('../fonts/Poppins-Regular.woff2') format('truetype');
   font-display: fallback;
 }
 //Import
